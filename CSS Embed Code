@@ -6,7 +6,7 @@
 }
 
 /* Targets Main Event Name */
-[class*="Textstyles__StyledContainer"] {
+[class*="Textstyles__StyledContainer-sc-1b0tn1o-0"] {
   font-family: 'Feeling Passionate', cursive !important;
   font-size: 32px;
   letter-spacing: 1px;
