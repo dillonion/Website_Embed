@@ -1,0 +1,79 @@
+html, body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll; /* Prevents scrollbars from affecting layout shifts */
+    width: 100%;
+}
+
+#root > main > div > div {
+    position: relative;
+    z-index: 0; /* Establishes a stacking context */
+}
+
+#root > main > div > div::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://i.imgur.com/Awysh0F.png');
+    background-size: 45% auto; /* Adjust as needed */
+    background-repeat: repeat;
+    background-position: top center;
+    opacity: 0.95;
+    pointer-events: none; /* Allows interactions with content */
+    z-index: -1; /* Places the pseudo-element behind the content */
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    #root > main > div > div::before {
+        background-size: 75% auto; /* Adjust for mobile view */
+        background-position: center;
+        opacity: 0.12 !important;
+    }
+}
+/* For Desktops */
+@media (min-width: 769px) {
+    #root > main > div > div::before {
+        opacity: 0.65 !important;
+    }
+}
+
+#root > main > div > div > div > div > div > div > div.joykit-box.Headerstyles__StyledRoot-sc-1ekqkbx-0.fMABLh.bqsXzY.jyse-jyse-container-6.jyse-jyse-container-7 {
+    background: rgba(255, 255, 255, 0.0) !important; /* Translucent white background */
+    border-radius: 60px; /* Softened edges */
+    padding: 1px; /* Ensures content spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds depth */
+    transition: none !important; /* Remove transition to prevent layout shifts */
+    width: 100%;
+}
+
+.joykit-box.krkxki {
+    background: rgba(255, 255, 255, 0.8) !important; /* Translucent white background */
+    border-radius: 60px; /* Softened edges */
+    padding: 1px; /* Ensures content spacing */
+    text-align: center; /* Ensure centered content */
+    z-index: 10 !important;
+    position: relative !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds depth */
+    transition: none !important; /* Remove transition to prevent layout shifts */
+    width: 100%;
+}
+
+.joykit-box.Headerstyles__StyledRoot-sc-1ekqkbx-0 {
+    background: rgba(255, 255, 255, 0.0) !important; /* Translucent white background part of the cover */
+}
+
+.joykit-box.Headerstyles__StyledTitle-sc-1ekqkbx-1 {
+    background: rgba(255, 255, 255, 0.0) !important; /* Translucent white background */
+}
+
+.joykit-box.Textstyles__StyledContainer-sc-1b0tn10-0 {
+    background: rgba(255, 255, 255, 0.0) !important; /* Translucent white background */
+}
+
+.joykit-box.Buttonstyles__StyledContainer-sc-1053m13-2 {
+    background: rgba(255, 255, 255, 0.0) !important; /* Fully transparent */
+}
